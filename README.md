@@ -3,7 +3,7 @@
 This repository contains the source code for the WordPress plugin to make your WordPress website support the [Global Input App](https://globalinput.co.uk/), so you can use your mobile to sign in on your website via a browser on your computer.
 
 ### Installation
-Wownload the [WordPress-global input-plugin.zip](https://github.com/global-input/wordpress-login/blob/master/wordpress-globalinput-plugin.zip), or you can generate the zip file yourself from the source by running the following command
+Download the [WordPress-global input-plugin.zip](https://github.com/global-input/wordpress-login/blob/master/wordpress-globalinput-plugin.zip), or you can generate the zip file yourself from the source by running the following command
   ```
     ./package.sh
   ```
