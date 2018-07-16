@@ -7,7 +7,7 @@ download the [WordPress-global input-plugin.zip](https://github.com/global-input
   ```
     ./package.sh
   ```
-Above command creates a zip file from the files in the ```wordpress-globalinput-plugin``` folder.
+Above command re-create the ```wordpress-global-input-plugin.zip``` file from the files in the ```wordpress-globalinput-plugin``` folder.
 
 Then in Plugins page of your WordPress Admin console, click on the "Add New" button, then click on the "Upload Plugin", and then click on the "Choose file" button. Finally select the zip to upload it to your WordPress instance, and then activate the plugin.
 
