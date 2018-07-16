@@ -1,86 +1,28 @@
-# global-input/word-login
+# wordpress-globalinput-plugin
 
-
-This repository is to make your wordpress website support the [Global Input App](https://globalinput.co.uk/), so you can use your mobile as a sign-in device while you are signing in on your website via a browser on your computer.
+This repository contains the source code for the wordpress plugin to make your wordpress website support the [Global Input App](https://globalinput.co.uk/), so you can use your mobile to signing in on your website via a browser on your computer.
 
 ### Installation
+download the wordpress-globalinput-plugin.zip, you can generate the zip file yourself from the source by running the command
+  ```
+    ./package.sh
+  ```
+Then in Plugins pages of your WordPress Admin console, click on "Add New" button, then click on "Upload Plugin", and then click on "Choose file". Finally select the zip to upload to your wordpress, and then activate the plugin.
 
-First backup your existing ```wordpress/wp-login.php``` file in your website folder and replace its content with the content of the [```wordpress/wp-login.php``` in this repo](https://github.com/global-input/wordpress-login/blob/master/wordpress/wp-login.php)
+### How to Use
+1. Install the Global Input App[https://globalinput.co.uk/global-input-app/app] on your mobile.
 
-### How It Works/Manual Editing file
-If you prefer editing the file instead of overwriting it with the one from this repository, you can follow the following steps.
-First backup your existing ```wordpress/wp-login.php``` file in your website folder and
-open the file ```wordpress/wp-login.php``` with an editor.
+2. Go to the login page <your-website-url>/wp-login.php
+you will see a QR Code displayed above the Login Form
 
-And insert the following content somewhere in the file:
+3. Scan the QR Code with your Global Input App.
+  On your mobile, the login form will be displayed. When you type your credentials on your mobile, the form on your computer will also be filled in automatically.
 
-```
-<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/04f46c6a/qrcode.min.js">
-</script>
-<script src="https://unpkg.com/global-input-message@1.5.5/distribution/globalinputmessage.min.js">
-</script>
-<script type="text/javascript">
-(function() {
-	var formElement=document.getElementById("loginform");
-	qrCodeElement=document.createElement('p');
-	qrCodeElement.style.padding="10px";
-	qrCodeElement.style.backgroundColor="#FFFFFF";
-	formElement.parentNode.insertBefore(qrCodeElement,formElement);
-	var globalinput={
-	api:require("global-input-message")
-	};
-	globalinput.config={
-	onSenderConnected:function(){
-	qrCodeElement.style.display="none";
-	},
-   onSenderDisconnected:function(){
-   	   qrCodeElement.style.display="block";
-    },
-	initData:{
-	action:"input",
-	dataType:"form",
-	form:{
-	id:  "###username###@"+window.location.hostname+".wordpress",
-	title: "Wordpress login",
-	fields:[{
-	label:"Username",
-	id:"username",
-	operations:{
-	   onInput:function(username){
-	   document.getElementById("user_login").value=username;
-	   }
-	   }
-	},{
-   label:"Password",																	   id:"password",
-   type:"secret",
-   operations:{																							onInput:function(password){
-   document.getElementById("user_pass").value=password;
-   }
-   }
-   },{																						    label:"Login",
-		type:"button",																		    operations:{
-		onInput:function(){
-		document.getElementById("wp-submit").click();
-		}
-		}
-		}]
-		}
-		}
-		};
-globalinput.connector=globalinput.api.createMessageConnector();
-globalinput.connector.connect(globalinput.config);
-var codedata=globalinput.connector.buildInputCodeData();
-var qrcode = new QRCode(qrCodeElement, {
-text: codedata,
-width: 300,
-height: 300,
-colorDark : "#000000",
-colorLight : "#ffffff",
-correctLevel : QRCode.CorrectLevel.H
-});
-})();
-</script>
-```
-If you would like learn more about how the above script works, please visit the [Global Input Platform page](https://globalinput.co.uk/global-input-app/platform)
+4. Press "Save" button on your mobile to save it into the app.
 
-wordpress plugin...
+5.  Logged out and try again the process from step 2.
+
+6. This time "Matched" button will be displayed at the bottom of your mobile screen meaning the credential required is found.
+7. Press the "Matched" button, select the data item, and press the "Select" button.
+  this will send the selected data to the login form being displayed on your computer.
+8. Press "Login" button on your mobile to log into your word press.
