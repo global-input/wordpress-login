@@ -1,6 +1,8 @@
 # wordpress-globalinput-plugin
 
-This repository contains the source code for the WordPress plugin to make your WordPress website support the [Global Input App](https://globalinput.co.uk/), so you can use your mobile to sign in on your website via a browser on your computer.
+This repository contains the source code for a WordPress plugin, which enables the WordPress website to support the [Global Input App](https://globalinput.co.uk/global-input-app/app). After activating the plugin, you should see a QR code on top of the Sign In form. When
+You scan the QR Code with your [Global Input App](https://globalinput.co.uk/global-input-app/app), you can type on your mobile to fill in the Sign In form on your computer. After the saving the form content into the mobile app, next time you can speed up the login process by  selecting the data to fill in the form. This you way you can set a string password and login quickly using your mobile.
+
 
 ### Installation
 Download the [WordPress-global input-plugin.zip](https://github.com/global-input/wordpress-login/blob/master/wordpress-globalinput-plugin.zip), or you can generate the zip file yourself from the source by running the following command
@@ -14,8 +16,7 @@ Then in the "Plugins" page on your WordPress Admin console, click on the "Add Ne
 ### How to Use It
 1. Install the [Global Input App](https://globalinput.co.uk/global-input-app/app) on your mobile.
 
-2. Go to the login page <your-website-url>/wp-login.php
-you will see a QR Code displayed above the Login Form
+2. Load the login page <your-website-url>/wp-login.php, which should display a QR Code above the the Login Form
 
 3. Scan the QR Code with your Global Input App.
   When you type your credentials on your mobile, the form on your computer will also be filled in automatically.
