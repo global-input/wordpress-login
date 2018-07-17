@@ -1,10 +1,22 @@
 <?php
 /*
-Plugin Name: GlobalInput Log in for Wordpress
-Author: https://github.com/global-input/wordpress-login, Mod: 16.07.2018 DrTech76, making it self-installable
-Description: Update of the GlobalInput Log in for Wordpress(https://github.com/global-input/wordpress-login) plugin, so it does not require manuyal wp-login replacement/editing, but it's self-installable through the wp dashboard
+Plugin Name: Wordpress Log-in with Global Input App
+Plugin URI: https://github.com/global-input/wordpress-login
+Description: Safe Wordpress Log-in through GlobalInput App. For more details see the GitHub repo at https://github.com/global-input/wordpress-login or at https://globalinput.co.uk
+Version: 1.0
+Author: Iterative Solution Limited
+Author URI: https://iterativesolution.co.uk/
+License:     MIT (Expat)
+License URI:  https://opensource.org/licenses/MIT
 
-Version: Not Available
+Copyright 2018 Iterative Solution Limited
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 */
 
 class Wordpress_GlobalInput_LogIn
@@ -12,10 +24,10 @@ class Wordpress_GlobalInput_LogIn
 	private $templatesDir="";
 	private $className="";
 	private $template="";
-	
+
 	public function __construct($menu=null)
 	{
-		$this->templatesDir=dirname(__FILE__)."/templates";
+		$this->templatesDir=dirname(__FILE__)."/assets/templates";
 		$this->className=get_class($this);
 		$this->template=$this->templatesDir."/".$this->className."_includes.php";
 		if(!session_id())
@@ -31,13 +43,13 @@ class Wordpress_GlobalInput_LogIn
 			}
 		}
 	}
-	
+
 	public function __destruct(){}
-	
+
 	public function activate(){}
-	
+
 	public function deactivate(){}
-	
+
 	public function add_js()
 	{
 		if(file_exists($this->template))
@@ -46,7 +58,7 @@ class Wordpress_GlobalInput_LogIn
 			include($this->template);
 			$js_includes=ob_get_clean();
 			echo $js_includes;
-			wp_enqueue_script($this->className."_login",plugins_url("js/".$this->className.".js",__FILE__),array("jquery"),null,true);
+			wp_enqueue_script($this->className."_login",plugins_url("assets/js/".$this->className.".js",__FILE__),array("jquery"),null,true);
 		}
 	}
 }
