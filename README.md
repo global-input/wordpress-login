@@ -12,7 +12,7 @@ Above command re-create the ```wordpress-global-input-plugin.zip``` file from th
 Then in the "Plugins" page on your WordPress Admin console, click on the "Add New" button. Then click on the "Upload Plugin", then click on the "Choose file" button. Finally select the zip to upload it to your WordPress instance, and then activate the plugin.
 
 ### How to Use It
-1. Install the Global Input App[https://globalinput.co.uk/global-input-app/app] on your mobile.
+1. Install the [Global Input App](https://globalinput.co.uk/global-input-app/app) on your mobile.
 
 2. Go to the login page <your-website-url>/wp-login.php
 you will see a QR Code displayed above the Login Form
