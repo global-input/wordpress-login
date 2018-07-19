@@ -2,7 +2,7 @@
 /*
 Plugin Name: WP GlobalInput Login
 Plugin URI: https://github.com/global-input/wordpress-login
-Description: This enables the WordPress website to support the Global Input App (https://globalinput.co.uk/global-input-app/app). After activating the plugin, you should see a QR code on top of the sign in form. When you scan the QR Code with your Global Input App, you can type on your mobile to fill in the Sign In form on your computer. After saving the form data on the first time use, next time you can speed up the login process by selecting the data to fill in the form. This would allow you to set a very strong password to protect your website from password hacking and still can login, safely and securely, speedily using your mobile.
+Description: This enables the WordPress website to support the Global Input App (https://globalinput.co.uk/global-input-app/app). After activating the plugin, you should be able to see a QR code on top of the sign in form. When you scan the QR Code with your Global Input App, you can type on your mobile to fill in the Sign In form on your computer. After saving the form data upon the first time use, next time you can speed up the login process by selecting the data to fill in the form. This would allow you to set a very strong password to protect your website from password hacking and still can sign in securely and speedily using your mobile.
 Version: 1.0.0
 Author: Iterative Solution Limited
 Author URI: https://iterativesolution.co.uk/
