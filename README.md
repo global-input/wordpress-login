@@ -7,13 +7,15 @@ You can now set a very strong password to protect your website from password hac
 
 
 ### Installation
-Download the [WordPress-global input-plugin.zip](https://github.com/global-input/wordpress-login/blob/master/wp-globalinput-login.zip), or you can generate the zip file yourself from the source files by running the following command after cloning the repository on your local disk.
+This plugin is available in the WordPress official plugin directory as "WP GlobalInput Login", you can search "GlobalInput Login" in the plugin page to locate the plugin.
+
+You can also download the [WordPress-global input-plugin.zip](https://github.com/global-input/wordpress-login/blob/master/wp-globalinput-login.zip), or you can generate the zip file yourself from the source files by running the following command after cloning the repository on your local disk.
   ```
     ./package.sh
   ```
 Above script contains a single line zip command to re-create the ```wp-globalinput-login.zip``` file from the files in the ```wp-globalinput-login``` folder.
 
-Then install the plugin via the "Plugins" page on your WordPress Admin console: (1)click on the "Add New" button. (2) Click on the "Upload Plugin", (3) Click on the "Choose file" button. (4)Select the zip
+Then install the the plugin you have built yourself via the "Plugins" page on your WordPress Admin console: (1)click on the "Add New" button. (2) Click on the "Upload Plugin", (3) Click on the "Choose file" button. (4)Select the zip
 
 After activating the plugin, you can try it by follow the following steps.
 
