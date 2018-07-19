@@ -24,7 +24,7 @@ After activating the plugin, you can try it by follow the following steps.
 
 3. Scan the QR Code with your Global Input App.
 
-4. Type your credentials on your mobile, and watch the form omn your computer being filled.
+4. Type your credentials on your mobile, and watch the form on your computer being filled.
 
 5. Press the "Save" button on your mobile to save the credentials into your app.
 
