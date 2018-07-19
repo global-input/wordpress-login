@@ -1,22 +1,33 @@
 (function()
 {
 	var formElement=document.getElementById("loginform");
+	var wrap=document.createElement('p');
+	var note=document.createElement('h3');
+	note.style.padding="10px";
+	note.innerHTML='Scan with your Global Input App';
+	wrap.appendChild(note);
+
 	qrCodeElement=document.createElement('p');
 	qrCodeElement.style.padding="10px";
 	qrCodeElement.style.backgroundColor="#FFFFFF";
-	formElement.parentNode.insertBefore(qrCodeElement,formElement);
+
+	wrap.appendChild(qrCodeElement);
+
+	formElement.parentNode.insertBefore(wrap,formElement);
 	var globalinput={
 						api:require("global-input-message")
 					};
 	globalinput.config={
 						onSenderConnected:function()
 											{
-												qrCodeElement.style.display="none";
+												wrap.style.display="none";
 											},
 						onSenderDisconnected:function()
 												{
-													qrCodeElement.style.display="block";
+													wrap.style.display="block";
 												},
+						url:"https://globalinput.co.uk", //URL to your Global Input WebSocket Server
+						apikey:"k7jc3QcMPKEXGW5UC",      //API Key for connecting to the Global Input Server
 						initData:{
 									action:"input",
 									dataType:"form",

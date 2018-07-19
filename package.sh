@@ -1,2 +1,2 @@
-cd wordpress-globalinput-plugin
-zip -r ../wordpress-globalinput-plugin.zip .
+cd wp-globalinput-login
+zip -r ../wp-globalinput-login.zip .
