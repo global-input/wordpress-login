@@ -1076,7 +1076,7 @@ try {
 }());
 <?php } ?>
 </script>
-<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/04f46c6a/qrcode.min.js">
+<script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs@04f46c6a/qrcode.min.js">
 </script>
 
 
