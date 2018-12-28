@@ -2,7 +2,7 @@
 Contributors: hewzulla, DrTech76
 Tags: Global Input App, Mobile Sign In
 Requires at least: 3.6
-Tested up to: 4.9.7
+Tested up to: 5.0.2
 Requires PHP: 4.0
 Stable tag: trunk
 License: MIT (Expat)
@@ -16,7 +16,7 @@ The plugin enables the WordPress website to support logging in, safely and secur
 That would allow you to set a very strong password to protect your website from password hacking and still can sign in, securely and quickly using your mobile.
 
 == Installation ==
-There are no particular requirements. 
+There are no particular requirements.
 
 = Manual Installation =
 
@@ -48,9 +48,9 @@ B) Upload of the files using the 'Add new' action of the 'Plugins' list
 
 
 == Frequently Asked Questions ==
- 
+
 = How to Use It =
- 
+
 1) Install the Global Input App on your mobile (https://globalinput.co.uk).
 2) Load the login page /wp-login.php, which should display a QR Code above the Login Form
 3) Scan the QR Code with your Global Input App.
@@ -72,6 +72,9 @@ B) Upload of the files using the 'Add new' action of the 'Plugins' list
 * Initial plugin introduction
 
 == Upgrade Notice ==
- 
+
 = 1.0 =
 * Initial plugin introduction
+
+= 1.1 =
+* Load Balancing on WebSocket server nodes to improve performance
