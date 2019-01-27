@@ -68,13 +68,23 @@ B) Upload of the files using the 'Add new' action of the 'Plugins' list
 
 == Changelog ==
 
+= 1.2 =
+* Upgraded depdencies
+
+= 1.1 =
+* Load Balancing on WebSocket server nodes to improve performance
+
 = 1.0 =
 * Initial plugin introduction
 
 == Upgrade Notice ==
 
-= 1.0 =
-* Initial plugin introduction
+= 1.2 =
+* Upgraded depdencies.
 
 = 1.1 =
 * Load Balancing on WebSocket server nodes to improve performance
+
+
+= 1.0 =
+* Initial plugin introduction
